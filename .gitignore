@@ -4,6 +4,6 @@ src/tmp/sessions/*
 src/tmp/uploads/*
 
 !src/tmp/sessions/.gitkeep
-"src/tmp/uploads/.gitkeep
+!src/tmp/uploads/.gitkeep
 
 node_modules
