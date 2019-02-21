@@ -6,7 +6,7 @@
   "author": "Mauricio Blum <mauriciocblum@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js -e js"
   },
   "devDependencies": {
     "eslint": "^5.14.1",
@@ -21,9 +21,11 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.16.4",
+    "express-session": "^1.15.6",
     "multer": "^1.4.1",
     "nunjucks": "^3.1.7",
     "pg": "^7.8.0",
-    "sequelize": "^4.42.0"
+    "sequelize": "^4.42.0",
+    "session-file-store": "^1.2.0"
   }
 }
