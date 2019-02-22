@@ -1,2 +1,4 @@
 # mBarber
-Aplicação em Node para gerenciamento de salões de beleza/barbearia
+Node.js app to manage barber shop/beauty saloon appointments
+
+Developed during the Rockeatsear Omnistack Bootcamp
