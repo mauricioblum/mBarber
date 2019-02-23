@@ -22,6 +22,10 @@ class SessionController {
     }
 
     req.session.user = user
+
+    if (user.provider) {
+      return res.redirect(`/app/clients/${user.id}`)
+    }
     return res.redirect('/app/dashboard')
   }
 

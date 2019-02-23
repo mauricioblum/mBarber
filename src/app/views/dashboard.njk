@@ -4,6 +4,7 @@
 
   <div class="content">
   <strong>Olá, {{ user.name }}</strong>
+  {% if user.provider === false %}
   <p>Inicie um agendamento escolhendo um profissional abaixo: </p>
 
   <ul class="providers">
@@ -21,4 +22,31 @@
 
   <a href="/app/logout" class="logout">Sair</a>
   </div>
+
+{% else %}
+  <strong>Agendamentos</strong>
+
+   <ul class="providers">
+
+  </ul>
+
+{% for appointment in appointments %}
+
+  {% for client in clients %}
+  {% if client.id === appointment.user_id %}
+    <li class="provider">
+    <div>
+    <img src="/files/{{ client.avatar }}">
+    <strong>{{ client.name }} - <span id="ap-time">{{appointment.date.toLocaleDateString()}} - {{appointment.date.toLocaleTimeString()}}</span></strong>
+
+  </div>
+  </li>
+  {% endif %}
+{% endfor %}
+
+{% endfor %}
+
+  <a href="/app/logout" class="logout">Sair</a>
+
+{% endif %}
 {% endblock %}
